@@ -1,0 +1,298 @@
+[
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "metrics",
+        "importPath": "sklearn",
+        "description": "sklearn",
+        "isExtraImport": true,
+        "detail": "sklearn",
+        "documentation": {}
+    },
+    {
+        "label": "svm",
+        "importPath": "sklearn",
+        "description": "sklearn",
+        "isExtraImport": true,
+        "detail": "sklearn",
+        "documentation": {}
+    },
+    {
+        "label": "confusion_matrix",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "classification_report",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "LogisticRegression",
+        "importPath": "sklearn.linear_model",
+        "description": "sklearn.linear_model",
+        "isExtraImport": true,
+        "detail": "sklearn.linear_model",
+        "documentation": {}
+    },
+    {
+        "label": "train_test_split",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "KNeighborsClassifier",
+        "importPath": "sklearn.neighbors",
+        "description": "sklearn.neighbors",
+        "isExtraImport": true,
+        "detail": "sklearn.neighbors",
+        "documentation": {}
+    },
+    {
+        "label": "DecisionTreeClassifier",
+        "importPath": "sklearn.tree",
+        "description": "sklearn.tree",
+        "isExtraImport": true,
+        "detail": "sklearn.tree",
+        "documentation": {}
+    },
+    {
+        "label": "GaussianNB",
+        "importPath": "sklearn.naive_bayes",
+        "description": "sklearn.naive_bayes",
+        "isExtraImport": true,
+        "detail": "sklearn.naive_bayes",
+        "documentation": {}
+    },
+    {
+        "label": "Xtrain_ini",
+        "kind": 5,
+        "importPath": "Classification_Problem1",
+        "description": "Classification_Problem1",
+        "peekOfCode": "Xtrain_ini = np.load('Xtrain_Classification_Part1.npy')\nYtrain_ini = np.load('Ytrain_Classification_Part1.npy')\nXtest = np.load('Xtest_Classification_Part1.npy')\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.model_selection import train_test_split\nXtrain, X_valid, Ytrain, Y_valid = train_test_split(Xtrain_ini, Ytrain_ini, test_size = 0.3, random_state = 0)\n#Logistic Regression\nlr = LogisticRegression()\nlr.fit(Xtrain, Ytrain)\ny_pred_lr = lr.predict(X_valid)",
+        "detail": "Classification_Problem1",
+        "documentation": {}
+    },
+    {
+        "label": "Ytrain_ini",
+        "kind": 5,
+        "importPath": "Classification_Problem1",
+        "description": "Classification_Problem1",
+        "peekOfCode": "Ytrain_ini = np.load('Ytrain_Classification_Part1.npy')\nXtest = np.load('Xtest_Classification_Part1.npy')\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.model_selection import train_test_split\nXtrain, X_valid, Ytrain, Y_valid = train_test_split(Xtrain_ini, Ytrain_ini, test_size = 0.3, random_state = 0)\n#Logistic Regression\nlr = LogisticRegression()\nlr.fit(Xtrain, Ytrain)\ny_pred_lr = lr.predict(X_valid)\nlr_score = lr.score(X_valid, Y_valid)",
+        "detail": "Classification_Problem1",
+        "documentation": {}
+    },
+    {
+        "label": "Xtest",
+        "kind": 5,
+        "importPath": "Classification_Problem1",
+        "description": "Classification_Problem1",
+        "peekOfCode": "Xtest = np.load('Xtest_Classification_Part1.npy')\nfrom sklearn.linear_model import LogisticRegression\nfrom sklearn.model_selection import train_test_split\nXtrain, X_valid, Ytrain, Y_valid = train_test_split(Xtrain_ini, Ytrain_ini, test_size = 0.3, random_state = 0)\n#Logistic Regression\nlr = LogisticRegression()\nlr.fit(Xtrain, Ytrain)\ny_pred_lr = lr.predict(X_valid)\nlr_score = lr.score(X_valid, Y_valid)\nprint('score for LogisticRegression: ', lr_score)",
+        "detail": "Classification_Problem1",
+        "documentation": {}
+    },
+    {
+        "label": "lr",
+        "kind": 5,
+        "importPath": "Classification_Problem1",
+        "description": "Classification_Problem1",
+        "peekOfCode": "lr = LogisticRegression()\nlr.fit(Xtrain, Ytrain)\ny_pred_lr = lr.predict(X_valid)\nlr_score = lr.score(X_valid, Y_valid)\nprint('score for LogisticRegression: ', lr_score)\nprint('Accuracy: ', metrics.accuracy_score(Y_valid, y_pred_lr))\nconfusion_matrix_lr = confusion_matrix(Y_valid, y_pred_lr)\nprint('LogisticRegression confusion matrix: ')\nprint(confusion_matrix_lr)\nprint(classification_report(Y_valid, y_pred_lr))",
+        "detail": "Classification_Problem1",
+        "documentation": {}
+    },
+    {
+        "label": "y_pred_lr",
+        "kind": 5,
+        "importPath": "Classification_Problem1",
+        "description": "Classification_Problem1",
+        "peekOfCode": "y_pred_lr = lr.predict(X_valid)\nlr_score = lr.score(X_valid, Y_valid)\nprint('score for LogisticRegression: ', lr_score)\nprint('Accuracy: ', metrics.accuracy_score(Y_valid, y_pred_lr))\nconfusion_matrix_lr = confusion_matrix(Y_valid, y_pred_lr)\nprint('LogisticRegression confusion matrix: ')\nprint(confusion_matrix_lr)\nprint(classification_report(Y_valid, y_pred_lr))\n#KNeighborsClassifier\nfrom sklearn.neighbors import KNeighborsClassifier",
+        "detail": "Classification_Problem1",
+        "documentation": {}
+    },
+    {
+        "label": "lr_score",
+        "kind": 5,
+        "importPath": "Classification_Problem1",
+        "description": "Classification_Problem1",
+        "peekOfCode": "lr_score = lr.score(X_valid, Y_valid)\nprint('score for LogisticRegression: ', lr_score)\nprint('Accuracy: ', metrics.accuracy_score(Y_valid, y_pred_lr))\nconfusion_matrix_lr = confusion_matrix(Y_valid, y_pred_lr)\nprint('LogisticRegression confusion matrix: ')\nprint(confusion_matrix_lr)\nprint(classification_report(Y_valid, y_pred_lr))\n#KNeighborsClassifier\nfrom sklearn.neighbors import KNeighborsClassifier\nknn_model = KNeighborsClassifier(n_neighbors=5)",
+        "detail": "Classification_Problem1",
+        "documentation": {}
+    },
+    {
+        "label": "confusion_matrix_lr",
+        "kind": 5,
+        "importPath": "Classification_Problem1",
+        "description": "Classification_Problem1",
+        "peekOfCode": "confusion_matrix_lr = confusion_matrix(Y_valid, y_pred_lr)\nprint('LogisticRegression confusion matrix: ')\nprint(confusion_matrix_lr)\nprint(classification_report(Y_valid, y_pred_lr))\n#KNeighborsClassifier\nfrom sklearn.neighbors import KNeighborsClassifier\nknn_model = KNeighborsClassifier(n_neighbors=5)\nknn_model.fit(Xtrain, Ytrain)\ny_pred_knn = knn_model.predict(X_valid)\nknn_score = knn_model.score(X_valid, Y_valid)",
+        "detail": "Classification_Problem1",
+        "documentation": {}
+    },
+    {
+        "label": "knn_model",
+        "kind": 5,
+        "importPath": "Classification_Problem1",
+        "description": "Classification_Problem1",
+        "peekOfCode": "knn_model = KNeighborsClassifier(n_neighbors=5)\nknn_model.fit(Xtrain, Ytrain)\ny_pred_knn = knn_model.predict(X_valid)\nknn_score = knn_model.score(X_valid, Y_valid)\nprint('score for KNeighborsRegressor: ', knn_score)\nprint('Accuracy: ', metrics.accuracy_score(Y_valid, y_pred_knn))\nconfusion_matrix_knn = confusion_matrix(Y_valid, y_pred_knn)\nprint('KNeighborsRegressor confusion matrix: ')\nprint(confusion_matrix_knn)\nprint(classification_report(Y_valid, y_pred_knn))",
+        "detail": "Classification_Problem1",
+        "documentation": {}
+    },
+    {
+        "label": "y_pred_knn",
+        "kind": 5,
+        "importPath": "Classification_Problem1",
+        "description": "Classification_Problem1",
+        "peekOfCode": "y_pred_knn = knn_model.predict(X_valid)\nknn_score = knn_model.score(X_valid, Y_valid)\nprint('score for KNeighborsRegressor: ', knn_score)\nprint('Accuracy: ', metrics.accuracy_score(Y_valid, y_pred_knn))\nconfusion_matrix_knn = confusion_matrix(Y_valid, y_pred_knn)\nprint('KNeighborsRegressor confusion matrix: ')\nprint(confusion_matrix_knn)\nprint(classification_report(Y_valid, y_pred_knn))\n#Decision Tree Classifier\nfrom sklearn.tree import DecisionTreeClassifier",
+        "detail": "Classification_Problem1",
+        "documentation": {}
+    },
+    {
+        "label": "knn_score",
+        "kind": 5,
+        "importPath": "Classification_Problem1",
+        "description": "Classification_Problem1",
+        "peekOfCode": "knn_score = knn_model.score(X_valid, Y_valid)\nprint('score for KNeighborsRegressor: ', knn_score)\nprint('Accuracy: ', metrics.accuracy_score(Y_valid, y_pred_knn))\nconfusion_matrix_knn = confusion_matrix(Y_valid, y_pred_knn)\nprint('KNeighborsRegressor confusion matrix: ')\nprint(confusion_matrix_knn)\nprint(classification_report(Y_valid, y_pred_knn))\n#Decision Tree Classifier\nfrom sklearn.tree import DecisionTreeClassifier\nDtree = DecisionTreeClassifier()",
+        "detail": "Classification_Problem1",
+        "documentation": {}
+    },
+    {
+        "label": "confusion_matrix_knn",
+        "kind": 5,
+        "importPath": "Classification_Problem1",
+        "description": "Classification_Problem1",
+        "peekOfCode": "confusion_matrix_knn = confusion_matrix(Y_valid, y_pred_knn)\nprint('KNeighborsRegressor confusion matrix: ')\nprint(confusion_matrix_knn)\nprint(classification_report(Y_valid, y_pred_knn))\n#Decision Tree Classifier\nfrom sklearn.tree import DecisionTreeClassifier\nDtree = DecisionTreeClassifier()\nDtree.fit(Xtrain, Ytrain)\ny_pred_Dtree = Dtree.predict(X_valid)\nDtree_score = Dtree.score(X_valid, Y_valid)",
+        "detail": "Classification_Problem1",
+        "documentation": {}
+    },
+    {
+        "label": "Dtree",
+        "kind": 5,
+        "importPath": "Classification_Problem1",
+        "description": "Classification_Problem1",
+        "peekOfCode": "Dtree = DecisionTreeClassifier()\nDtree.fit(Xtrain, Ytrain)\ny_pred_Dtree = Dtree.predict(X_valid)\nDtree_score = Dtree.score(X_valid, Y_valid)\nprint('score for DecisionTreeClassifier: ', Dtree_score)\nprint('Accuracy: ', metrics.accuracy_score(Y_valid, y_pred_Dtree))\nconfusion_matrix_Dtree = confusion_matrix(Y_valid, y_pred_Dtree)\nprint('DecisionTreeClassifier confusion matrix: ')\nprint(confusion_matrix_Dtree)\nprint(classification_report(Y_valid, y_pred_Dtree))",
+        "detail": "Classification_Problem1",
+        "documentation": {}
+    },
+    {
+        "label": "y_pred_Dtree",
+        "kind": 5,
+        "importPath": "Classification_Problem1",
+        "description": "Classification_Problem1",
+        "peekOfCode": "y_pred_Dtree = Dtree.predict(X_valid)\nDtree_score = Dtree.score(X_valid, Y_valid)\nprint('score for DecisionTreeClassifier: ', Dtree_score)\nprint('Accuracy: ', metrics.accuracy_score(Y_valid, y_pred_Dtree))\nconfusion_matrix_Dtree = confusion_matrix(Y_valid, y_pred_Dtree)\nprint('DecisionTreeClassifier confusion matrix: ')\nprint(confusion_matrix_Dtree)\nprint(classification_report(Y_valid, y_pred_Dtree))\n#Support Vector Machine\nfrom sklearn import svm",
+        "detail": "Classification_Problem1",
+        "documentation": {}
+    },
+    {
+        "label": "Dtree_score",
+        "kind": 5,
+        "importPath": "Classification_Problem1",
+        "description": "Classification_Problem1",
+        "peekOfCode": "Dtree_score = Dtree.score(X_valid, Y_valid)\nprint('score for DecisionTreeClassifier: ', Dtree_score)\nprint('Accuracy: ', metrics.accuracy_score(Y_valid, y_pred_Dtree))\nconfusion_matrix_Dtree = confusion_matrix(Y_valid, y_pred_Dtree)\nprint('DecisionTreeClassifier confusion matrix: ')\nprint(confusion_matrix_Dtree)\nprint(classification_report(Y_valid, y_pred_Dtree))\n#Support Vector Machine\nfrom sklearn import svm\nSVM = svm.SVC()",
+        "detail": "Classification_Problem1",
+        "documentation": {}
+    },
+    {
+        "label": "confusion_matrix_Dtree",
+        "kind": 5,
+        "importPath": "Classification_Problem1",
+        "description": "Classification_Problem1",
+        "peekOfCode": "confusion_matrix_Dtree = confusion_matrix(Y_valid, y_pred_Dtree)\nprint('DecisionTreeClassifier confusion matrix: ')\nprint(confusion_matrix_Dtree)\nprint(classification_report(Y_valid, y_pred_Dtree))\n#Support Vector Machine\nfrom sklearn import svm\nSVM = svm.SVC()\nSVM.fit(Xtrain, Ytrain)\ny_pred_svm = SVM.predict(X_valid)\nsvm_score = SVM.score(X_valid, Y_valid)",
+        "detail": "Classification_Problem1",
+        "documentation": {}
+    },
+    {
+        "label": "SVM",
+        "kind": 5,
+        "importPath": "Classification_Problem1",
+        "description": "Classification_Problem1",
+        "peekOfCode": "SVM = svm.SVC()\nSVM.fit(Xtrain, Ytrain)\ny_pred_svm = SVM.predict(X_valid)\nsvm_score = SVM.score(X_valid, Y_valid)\nprint('score for Supporter Vector Machine: ', svm_score)\nprint('Accuracy: ', metrics.accuracy_score(Y_valid, y_pred_svm))\nconfusion_matrix_svm = confusion_matrix(Y_valid, y_pred_svm)\nprint('Support Vector Machine confusion matrix: ')\nprint(confusion_matrix_svm)\nprint(classification_report(Y_valid, y_pred_svm))",
+        "detail": "Classification_Problem1",
+        "documentation": {}
+    },
+    {
+        "label": "y_pred_svm",
+        "kind": 5,
+        "importPath": "Classification_Problem1",
+        "description": "Classification_Problem1",
+        "peekOfCode": "y_pred_svm = SVM.predict(X_valid)\nsvm_score = SVM.score(X_valid, Y_valid)\nprint('score for Supporter Vector Machine: ', svm_score)\nprint('Accuracy: ', metrics.accuracy_score(Y_valid, y_pred_svm))\nconfusion_matrix_svm = confusion_matrix(Y_valid, y_pred_svm)\nprint('Support Vector Machine confusion matrix: ')\nprint(confusion_matrix_svm)\nprint(classification_report(Y_valid, y_pred_svm))\n#Gaussian Naive Bayes\nfrom sklearn.naive_bayes import GaussianNB",
+        "detail": "Classification_Problem1",
+        "documentation": {}
+    },
+    {
+        "label": "svm_score",
+        "kind": 5,
+        "importPath": "Classification_Problem1",
+        "description": "Classification_Problem1",
+        "peekOfCode": "svm_score = SVM.score(X_valid, Y_valid)\nprint('score for Supporter Vector Machine: ', svm_score)\nprint('Accuracy: ', metrics.accuracy_score(Y_valid, y_pred_svm))\nconfusion_matrix_svm = confusion_matrix(Y_valid, y_pred_svm)\nprint('Support Vector Machine confusion matrix: ')\nprint(confusion_matrix_svm)\nprint(classification_report(Y_valid, y_pred_svm))\n#Gaussian Naive Bayes\nfrom sklearn.naive_bayes import GaussianNB\nnb = GaussianNB()",
+        "detail": "Classification_Problem1",
+        "documentation": {}
+    },
+    {
+        "label": "confusion_matrix_svm",
+        "kind": 5,
+        "importPath": "Classification_Problem1",
+        "description": "Classification_Problem1",
+        "peekOfCode": "confusion_matrix_svm = confusion_matrix(Y_valid, y_pred_svm)\nprint('Support Vector Machine confusion matrix: ')\nprint(confusion_matrix_svm)\nprint(classification_report(Y_valid, y_pred_svm))\n#Gaussian Naive Bayes\nfrom sklearn.naive_bayes import GaussianNB\nnb = GaussianNB()\nnb.fit(Xtrain, Ytrain)\ny_pred_nb = nb.predict(X_valid)\nnb_score = nb.score(X_valid, Y_valid)",
+        "detail": "Classification_Problem1",
+        "documentation": {}
+    },
+    {
+        "label": "nb",
+        "kind": 5,
+        "importPath": "Classification_Problem1",
+        "description": "Classification_Problem1",
+        "peekOfCode": "nb = GaussianNB()\nnb.fit(Xtrain, Ytrain)\ny_pred_nb = nb.predict(X_valid)\nnb_score = nb.score(X_valid, Y_valid)\nprint('score for Gaussian Naive Bayes: ', nb_score)\nprint('Accuracy: ', metrics.accuracy_score(Y_valid, y_pred_nb))\nconfusion_matrix_nb = confusion_matrix(Y_valid, y_pred_nb)\nprint('Gaussian Naive Bayes confusion matrix')\nprint(confusion_matrix_nb)\nprint(classification_report(Y_valid, y_pred_nb))",
+        "detail": "Classification_Problem1",
+        "documentation": {}
+    },
+    {
+        "label": "y_pred_nb",
+        "kind": 5,
+        "importPath": "Classification_Problem1",
+        "description": "Classification_Problem1",
+        "peekOfCode": "y_pred_nb = nb.predict(X_valid)\nnb_score = nb.score(X_valid, Y_valid)\nprint('score for Gaussian Naive Bayes: ', nb_score)\nprint('Accuracy: ', metrics.accuracy_score(Y_valid, y_pred_nb))\nconfusion_matrix_nb = confusion_matrix(Y_valid, y_pred_nb)\nprint('Gaussian Naive Bayes confusion matrix')\nprint(confusion_matrix_nb)\nprint(classification_report(Y_valid, y_pred_nb))",
+        "detail": "Classification_Problem1",
+        "documentation": {}
+    },
+    {
+        "label": "nb_score",
+        "kind": 5,
+        "importPath": "Classification_Problem1",
+        "description": "Classification_Problem1",
+        "peekOfCode": "nb_score = nb.score(X_valid, Y_valid)\nprint('score for Gaussian Naive Bayes: ', nb_score)\nprint('Accuracy: ', metrics.accuracy_score(Y_valid, y_pred_nb))\nconfusion_matrix_nb = confusion_matrix(Y_valid, y_pred_nb)\nprint('Gaussian Naive Bayes confusion matrix')\nprint(confusion_matrix_nb)\nprint(classification_report(Y_valid, y_pred_nb))",
+        "detail": "Classification_Problem1",
+        "documentation": {}
+    },
+    {
+        "label": "confusion_matrix_nb",
+        "kind": 5,
+        "importPath": "Classification_Problem1",
+        "description": "Classification_Problem1",
+        "peekOfCode": "confusion_matrix_nb = confusion_matrix(Y_valid, y_pred_nb)\nprint('Gaussian Naive Bayes confusion matrix')\nprint(confusion_matrix_nb)\nprint(classification_report(Y_valid, y_pred_nb))",
+        "detail": "Classification_Problem1",
+        "documentation": {}
+    }
+]
